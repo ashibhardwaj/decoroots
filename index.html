@@ -112,7 +112,7 @@
 
     <h3 id="hampers" class="section-title">Hampers</h3>
     <div class="title-underline"></div>
-    <div class="product-grid">
+    <div class="product-grid hampers-grid">
       <article class="card product-card">
         <div class="product-image"><img src="images/product-mint-luxe.jpg" alt="Mint Luxe Play Set"></div>
         <h3>Mint Luxe Play Set</h3>
@@ -120,7 +120,7 @@
         <p class="product-size">Size: 20D x 20W x 10H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -131,7 +131,7 @@
         <p class="product-size">Size: 26D x 20W x 8H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -142,7 +142,7 @@
         <p class="product-size">Size: 20D x 20W x 10H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -153,7 +153,7 @@
         <p class="product-size">Size: 26D x 20W x 8H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -164,7 +164,7 @@
         <p class="product-size">Size: 25D x 25W x 10H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -175,7 +175,7 @@
         <p class="product-size">Size: 25D x 25W x 12H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -191,7 +191,7 @@
         <p class="product-size">Size: 20D x 20W x 65H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -202,7 +202,7 @@
         <p class="product-size">Size: 20D x 20W x 65H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -213,7 +213,7 @@
         <p class="product-size">Size: 20D x 20W x 65H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Send Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
 
@@ -224,7 +224,7 @@
         <p class="product-size">Size: 20D x 20W x 65H CM</p>
         <div class="product-footer">
           <span class="price">Inquire for Price</span>
-          <a href="mailto:info@decoroots.in" class="btn btn-pill">Add to Inquiry</a>
+          <button type="button" class="btn btn-pill js-open-inquiry">Send Inquiry</button>
         </div>
       </article>
     </div>
@@ -278,7 +278,7 @@
       <p class="contact-phone">+91-9821539836 / +91-9643959006</p>
       <div class="contact-actions">
         <a href="tel:+919821539836" class="btn btn-primary">CALL US</a>
-        <a href="mailto:info@decoroots.in" class="btn btn-outline">SEND INQUIRY</a>
+        <button type="button" class="btn btn-outline js-open-inquiry">SEND INQUIRY</button>
       </div>
     </div>
   </section>
@@ -293,6 +293,139 @@
     </div>
     <p class="copyright">&copy; 2025 DecoRoots. All Rights Reserved.</p>
   </footer>
+
+  <div class="inquiry-modal" id="inquiryModal" aria-hidden="true">
+    <div class="inquiry-modal-card" role="dialog" aria-modal="true" aria-labelledby="inquiryTitle">
+      <button class="inquiry-close" id="inquiryClose" aria-label="Close inquiry form">X</button>
+      <h3 id="inquiryTitle">Send Inquiry</h3>
+      <form id="inquiryForm" class="inquiry-form">
+        <label for="inquirySubject">Subject</label>
+        <input id="inquirySubject" name="subject" type="text" required placeholder="Inquiry about product or order">
+
+        <label for="inquiryDescription">Description</label>
+        <textarea id="inquiryDescription" name="description" rows="5" required placeholder="Tell us what you need, quantity, and timeline"></textarea>
+
+        <button type="submit" class="btn btn-primary">SEND EMAIL</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">X</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    (function () {
+      var inquiryEmail = "info@decoroots.in";
+      var inquiryModal = document.getElementById("inquiryModal");
+      var inquiryClose = document.getElementById("inquiryClose");
+      var inquiryForm = document.getElementById("inquiryForm");
+      var inquirySubject = document.getElementById("inquirySubject");
+      var inquiryDescription = document.getElementById("inquiryDescription");
+      var lightbox = document.getElementById("imageLightbox");
+      var lightboxImage = document.getElementById("lightboxImage");
+      var closeButton = document.getElementById("lightboxClose");
+
+      function openInquiryModal(subjectText) {
+        if (subjectText) {
+          inquirySubject.value = "Inquiry for " + subjectText;
+        } else {
+          inquirySubject.value = "Inquiry from website";
+        }
+        inquiryDescription.value = "";
+        inquiryModal.classList.add("is-open");
+        inquiryModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+        inquirySubject.focus();
+      }
+
+      function closeInquiryModal() {
+        inquiryModal.classList.remove("is-open");
+        inquiryModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("no-scroll");
+      }
+
+      document.querySelectorAll(".js-open-inquiry").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var card = button.closest(".product-card");
+          var title = card ? card.querySelector("h3") : null;
+          openInquiryModal(title ? title.textContent.trim() : "");
+        });
+      });
+
+      inquiryClose.addEventListener("click", closeInquiryModal);
+
+      inquiryModal.addEventListener("click", function (event) {
+        if (event.target === inquiryModal) {
+          closeInquiryModal();
+        }
+      });
+
+      inquiryForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var subjectValue = inquirySubject.value.trim();
+        var descriptionValue = inquiryDescription.value.trim();
+        if (!subjectValue || !descriptionValue) {
+          return;
+        }
+
+        var bodyValue = "Description:%0D%0A" + encodeURIComponent(descriptionValue) + "%0D%0A%0D%0AFrom:%20DecoRoots%20Website";
+        var mailtoUrl = "mailto:" + inquiryEmail + "?subject=" + encodeURIComponent(subjectValue) + "&body=" + bodyValue;
+        window.location.href = mailtoUrl;
+        closeInquiryModal();
+      });
+
+      function openLightbox(image) {
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt || "Product image";
+        lightbox.classList.add("is-open");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+        document.body.classList.remove("no-scroll");
+      }
+
+      document.querySelectorAll(".product-image img").forEach(function (image) {
+        image.classList.add("zoomable-image");
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-label", "View full image: " + (image.alt || "Product image"));
+
+        image.addEventListener("click", function () {
+          openLightbox(image);
+        });
+
+        image.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(image);
+          }
+        });
+      });
+
+      closeButton.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && inquiryModal.classList.contains("is-open")) {
+          closeInquiryModal();
+        } else if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
