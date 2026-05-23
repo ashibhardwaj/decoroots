@@ -332,6 +332,9 @@ button { font: inherit; cursor: pointer; }
   object-fit: contain;
   object-position: center;
 }
+.product-image img.product-img-flip {
+  transform: scaleX(-1);
+}
 .zoomable-image {
   cursor: zoom-in;
 }
