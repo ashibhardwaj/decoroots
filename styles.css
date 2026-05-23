@@ -637,7 +637,11 @@ button { font: inherit; cursor: pointer; }
   .sketch-12 { width: 60vw; }
   .badges-strip ul { justify-content: flex-start; }
   .badges-strip li { width: 45%; }
-  .product-image { height: 300px; }
+  .product-image { height: 350px; }
+  .product-card h3 { margin: 14px 16px 4px; font-size: 18px; }
+  .product-desc { margin: 0 16px 8px; font-size: 15px; }
+  .product-size { margin: 0 16px 10px; padding-top: 10px; }
+  .product-footer { padding: 10px 16px 14px; }
   .product-footer { justify-content: space-between; }
   .bulk-list { text-align: left; }
 }
@@ -645,7 +649,11 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 480px) {
   .site-nav { gap: 12px; }
   .hero-logo { width: 160px; height: 160px; }
-  .product-image { height: 280px; }
+  .product-image { height: 340px; }
+  .product-card h3 { margin: 12px 14px 3px; font-size: 16px; }
+  .product-desc { margin: 0 14px 6px; font-size: 14px; }
+  .product-size { margin: 0 14px 8px; padding-top: 8px; font-size: 13px; }
+  .product-footer { padding: 8px 14px 12px; }
   .contact-actions .btn { flex: 1; }
   .inquiry-modal {
     padding: 14px;
