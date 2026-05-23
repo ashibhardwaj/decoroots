@@ -319,7 +319,7 @@ button { font: inherit; cursor: pointer; }
   overflow: hidden;
 }
 .product-image {
-  height: clamp(220px, 28vw, 320px);
+  height: clamp(220px, 35vw, 320px);
   background: #f7f5f0;
   display: grid;
   place-items: center;
