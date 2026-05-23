@@ -637,7 +637,7 @@ button { font: inherit; cursor: pointer; }
   .sketch-12 { width: 60vw; }
   .badges-strip ul { justify-content: flex-start; }
   .badges-strip li { width: 45%; }
-  .product-image { height: 240px; }
+  .product-image { height: 300px; }
   .product-footer { justify-content: space-between; }
   .bulk-list { text-align: left; }
 }
@@ -645,7 +645,7 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 480px) {
   .site-nav { gap: 12px; }
   .hero-logo { width: 160px; height: 160px; }
-  .product-image { height: 210px; }
+  .product-image { height: 280px; }
   .contact-actions .btn { flex: 1; }
   .inquiry-modal {
     padding: 14px;
