@@ -342,9 +342,13 @@ button { font: inherit; cursor: pointer; }
   font-family: var(--serif-display);
   font-weight: 600;
   font-size: 22px;
+  line-height: 1.25;
+  min-height: 2.5em;
   margin: 22px 24px 6px;
 }
 .product-desc {
+  line-height: 1.45;
+  min-height: 2.9em;
   margin: 0 24px 12px;
   color: var(--ink-soft);
 }
@@ -359,6 +363,7 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
   padding: 14px 24px 22px;
   gap: 12px;
   flex-wrap: wrap;
